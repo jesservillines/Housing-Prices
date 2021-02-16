@@ -11,9 +11,10 @@ st.set_page_config(
     initial_sidebar_state='expanded'
 )
 
-st.title('Ames Predict-O-Matic!')
+st.title('Home Buyers Toolbox!')
 
 st.write('Use the sidebar to select a page to view.')
+st.write(np.__version__)
 
 page = st.sidebar.selectbox(
     'Page',
@@ -27,7 +28,7 @@ page = st.sidebar.selectbox(
 
 if page == 'Home':
     st.subheader('Home Page')
-    st.write('Hello, World, welcome to the Home Buyers Toolbox!')
+    st.write('Hello, welcome to the Home Buyers Toolbox!')
 
 if page == 'Form':
     # header
