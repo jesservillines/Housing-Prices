@@ -37,14 +37,14 @@ if page == 'Form':
     # get user input
     neigh_qual = st.number_input('Neighboorhood Quality Index', format='%d', min_value=int(0), value=int(0))
     local_feature = st.number_input('Local Positive Features', format='%d', min_value=int(0), value=int(0))
-    single_story = st.number_input('Single Story Building', format='%d', min_value=int(0), step=100, value=int(0))
-    multi_story = st.number_input('Multiple Story Building', format='%d', min_value=int(0), step=1000, value=int(0))
+    single_story = st.number_input('Single Story Building', format='%d', min_value=int(0), step=1, value=int(0))
+    multi_story = st.number_input('Multiple Story Building', format='%d', min_value=int(0), step=1, value=int(0))
 
     data = np.array([neigh_qual, local_feature, single_story, multi_story]).reshape(1, -1)
 
     st.subheader('Make a prediction')
 
-    with open('./model/model.p', 'rb') as pickle_in:
+    with open('./model/model_ames.p', 'rb') as pickle_in:
         model = pickle.load(pickle_in)
 
     predicted_price = model.predict(data)[0]
