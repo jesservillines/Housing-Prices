@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import streamlit as st
 
+
 st.set_page_config(
     page_icon='📖',
     initial_sidebar_state='expanded'
@@ -25,7 +26,7 @@ page = st.sidebar.selectbox(
 
 if page == 'Home':
     st.subheader('Home Page')
-    st.write('Hello, World, to my sliiiiick Streamlit App!')
+    st.write('Hello, World, welcome to the Home Buyers Toolbox!')
 
 if page == 'Form':
     # header
@@ -34,12 +35,12 @@ if page == 'Form':
     for which you want the price predicted.''')
 
     # get user input
-    qual = st.number_input('Neighboorhood Quality Index', format='%d', min_value=int(0), value=int(0))
-    bath = st.number_input('Local Positive Features', format='%d', min_value=int(0), value=int(0))
-    garage = st.number_input('Single Story Building', format='%d', min_value=int(0), step=100, value=int(0))
-    lot = st.number_input('Multiple Story Building', format='%d', min_value=int(0), step=1000, value=int(0))
+    neigh_qual = st.number_input('Neighboorhood Quality Index', format='%d', min_value=int(0), value=int(0))
+    local_feature = st.number_input('Local Positive Features', format='%d', min_value=int(0), value=int(0))
+    single_story = st.number_input('Single Story Building', format='%d', min_value=int(0), step=100, value=int(0))
+    multi_story = st.number_input('Multiple Story Building', format='%d', min_value=int(0), step=1000, value=int(0))
 
-    data = np.array([qual, bath, garage, lot]).reshape(1, -1)
+    data = np.array([neigh_qual, local_feature, single_story, multi_story]).reshape(1, -1)
 
     st.subheader('Make a prediction')
 
