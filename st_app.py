@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
+import sklearn
 
 
 st.set_page_config(
