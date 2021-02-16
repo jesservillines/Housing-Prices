@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-from sklearn.linear_model import lasso
+#from sklearn.linear_model import lasso
 
 
 st.set_page_config(
