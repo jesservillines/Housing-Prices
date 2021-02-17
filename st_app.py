@@ -39,7 +39,7 @@ if page == 'Form':
     overall_qual = st.number_input('Overall Building Quality', format='%d', min_value=int(0), step=1, value=int(0))
     local_feature = st.number_input('Local Positive Features', format='%d', min_value=int(0), value=int(0))
     outside = st.number_input('Outside Grill Space', format='%d', min_value=int(0), step=100, value=int(0))
-    shop = st.number_input('Shop Space, format='%d', min_value=int(0), step=100, value=int(0))
+    shop = st.number_input('Shop Space', format='%d', min_value=int(0), step=100, value=int(0))
     cars_garage = st.number_input('Additional Car Garag', format='%d', min_value=int(0), step=1, value=int(0))
     age = st.number_input('Building Age', format='%d', min_value=int(0), step=1, value=int(0))
     room_size = st.number_input('Size of Rooms', format='%d', min_value=int(0), step=1, value=int(0))
